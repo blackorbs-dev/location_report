@@ -1,16 +1,74 @@
-# location_report
+```markdown
+# 📍 Location Report App
 
-a location-based reporting mobile app, where users can log in, submit reports with categories, attach media (images or videos), and specify their location using a map or address input
+A Flutter application for creating and managing location-based incident reports. Users can capture media, select a report type, enter a description, and submit with automatic location tagging and address resolution.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🔧 Features
 
-A few resources to get you started if this is your first Flutter project:
+- 🗂 **Feature-Based Architecture** (Modular and scalable)
+- 🧠 **BLoC State Management** (Clean separation of UI and logic)
+- 📦 **ObjectBox** for fast local storage with embedded location entity and enum support
+- 🗺️ **Google Maps Integration** (`google_maps_flutter`)
+- 📍 **Geocoding** from coordinates to address
+- 📸 **Image & Video Capture** using `image_picker`
+- 🖋 **Overlay Text** on media with `image` package
+- 🔀 **Navigation** via `go_router`
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🚀 Getting Started
+
+### 🔑 Prerequisites
+
+- Flutter SDK (3.22 or newer recommended)
+- A Google Maps API key
+
+### 🔨 Setup Instructions
+
+```bash
+# Clone the repository
+git clone https://github.com/blackorbs-dev/location_report.git
+cd location_report
+
+# Install dependencies
+flutter pub get
+
+# Run the app with your Maps API key
+flutter run --dart-define=MAPS_API_KEY="ADD YOUR GOOGLE MAPS API KEY"
+```
+
+---
+
+---
+
+## 📁 Project Structure (Feature-based)
+
+```text
+lib/
+├── core/              # Shared utilities, services, constants
+├── features/
+│   └── report/
+│       ├── data/      # ObjectBox model, storage logic
+│       ├── domain/    # Entities, enums
+│       ├── logic/     # Bloc/Cubit
+│       ├── presentation/
+│           ├── pages/
+│           └── widgets/
+├── routes/            # go_router config
+main.dart              # Entry point
+```
+
+
+## 📌 Notes
+
+- No Firebase or backend integration required.
+- Location data is embedded in each report.
+
+---
+
+## 📜 License
+
+MIT License © 2025 [BlackOrbs Technology](https://github.com/blackorbs-dev)
+```
