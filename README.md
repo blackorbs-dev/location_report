@@ -1,4 +1,4 @@
-```markdown
+
 # 📍 Location Report App
 
 A Flutter application for creating and managing location-based incident reports. Users can capture media, select a report type, enter a description, and submit with automatic location tagging and address resolution.
